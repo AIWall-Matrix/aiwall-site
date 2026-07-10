@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#131619" stroke="#3a3f45"/>
+  <!-- wall courses (bricks), with a routed gate -->
+  <g stroke="#5d6670" stroke-width="1.6" stroke-linecap="round">
+    <path d="M6 9.5h8.5M18.5 9.5H26"/>
+    <path d="M6 16h4.5M26 16h-4.5"/>
+    <path d="M6 22.5h8.5M18.5 22.5H26"/>
+  </g>
+  <!-- the route threading through the wall -->
+  <path d="M16 4.5v3.2c0 1.6-1.6 2.4-1.6 4s1.6 2.4 1.6 4-1.6 2.4-1.6 4 1.6 2.4 1.6 4v3.8"
+        stroke="#e8a33d" stroke-width="1.9" stroke-linecap="round"/>
+  <circle cx="16" cy="27.5" r="2.1" fill="#e8a33d"/>
+</svg>
