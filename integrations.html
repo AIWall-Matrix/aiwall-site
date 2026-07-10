@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Integrations — Matrix by AIWall</title>
-  <meta name="description" content="Matrix is development-stack agnostic: bring your own agents, models, and tools. VisualLogic is a first-class integration; nothing is locked in.">
+  <meta name="description" content="Matrix is development-stack agnostic: bring your own agents, models, and tools. Nothing is locked in.">
   <meta name="theme-color" content="#0a0b0d">
   <link rel="icon" type="image/svg+xml" href="/assets/img/aiwall-mark.svg">
   <meta property="og:title" content="Integrations — Matrix by AIWall">
-  <meta property="og:description" content="Bring your own agents, models, and tools. VisualLogic is a first-class integration; nothing is locked in.">
+  <meta property="og:description" content="Bring your own agents, models, and tools. Nothing is locked in.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aiwall.com/integrations.html">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body data-page="integ">
 
 <nav class="nav">
   <div class="container">
@@ -23,13 +23,17 @@
       <span class="by">by AIWall</span>
     </a>
     <div class="nav-links">
-      <a href="/#platform">Platform</a>
-      <a href="/downloads.html">Downloads</a>
-      <a href="/guides.html">Guides</a>
-      <a href="/integrations.html" aria-current="page">Integrations</a>
+      <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+      <a href="/#action" data-i18n="common.nav.action">In action</a>
+      <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+      <a href="/integrations.html" aria-current="page" data-i18n="common.nav.integrations">Integrations</a>
     </div>
     <div class="nav-cta">
-      <a href="/join.html" class="btn btn-amber">Join your team</a>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
+      <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.download">Downloads</a>
+      <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -37,93 +41,72 @@
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <a href="/#platform">Platform</a>
-  <a href="/downloads.html">Downloads</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/integrations.html">Integrations</a>
-  <a href="/join.html" class="btn btn-amber">Join your team</a>
+  <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+  <a href="/#action" data-i18n="common.nav.action">In action</a>
+  <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+  <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
+  <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+  </div>
 </div>
 
 <header class="page-head">
   <div class="container">
-    <p class="kicker">Integrations</p>
-    <h1>Bring your own stack.</h1>
-    <p class="lede">Matrix routes and governs work across whatever you already build with.
+    <p class="kicker" data-i18n="integ.kicker">Integrations</p>
+    <h1 data-i18n="integ.h1">Bring your own stack.</h1>
+    <p class="lede" data-i18n="integ.lede">Matrix routes and governs work across whatever you already build with.
        Intelligence providers plug into the fabric as peers — none of them required, all of them
        governed the same way.</p>
   </div>
 </header>
 
-<!-- featured: VisualLogic -->
-<section class="section">
-  <div class="container">
-    <div class="integ-featured reveal">
-      <div>
-        <span class="tag">First-class integration</span>
-        <h2>VisualLogic</h2>
-        <p>The VisualLogic Agent OS — visual, deterministic app building and always-ready flow
-           apps — integrates with Matrix end to end. VisualLogic's Team workbench is powered by
-           Matrix; work moves between the two with full context attached.</p>
-        <a href="https://www.visuallogic.ai" target="_blank" rel="noopener" class="btn btn-amber">
-          Visit visuallogic.ai
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
-        </a>
-      </div>
-      <ul class="integ-points">
-        <li>Route work to VisualLogic builders, agents, and flow apps as routable intelligence</li>
-        <li>Team workbench in VisualLogic — powered by Matrix</li>
-        <li>Handoffs carry full context in both directions, session-free</li>
-        <li>Same governance wall: permissions, review gates, audit trails</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- generic categories -->
+<!-- provider categories -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">What Matrix routes to</p>
-      <h2>Providers are peers on the fabric.</h2>
-      <p>Matrix's provider layer is deliberately agnostic. If it can do work, it can be routed to —
+      <p class="kicker" data-i18n="integ.grid.kicker">What Matrix routes to</p>
+      <h2 data-i18n="integ.grid.h2">Providers are peers on the fabric.</h2>
+      <p data-i18n="integ.grid.lede">Matrix's provider layer is deliberately agnostic. If it can do work, it can be routed to —
          and governed.</p>
     </div>
     <div class="integ-grid reveal">
       <article class="integ">
-        <span class="integ-kind">AI compute</span>
-        <h3>Coding agents &amp; CLIs</h3>
-        <p>The command-line coding agents your team already runs. Matrix dispatches them work units,
+        <span class="integ-kind" data-i18n="integ.c1.kind">AI compute</span>
+        <h3 data-i18n="integ.c1.h3">Coding agents &amp; CLIs</h3>
+        <p data-i18n="integ.c1.p">The command-line coding agents your team already runs. Matrix dispatches them work units,
            locks their write scopes, and records everything they do.</p>
       </article>
       <article class="integ">
-        <span class="integ-kind">AI compute</span>
-        <h3>Models &amp; agent fleets</h3>
-        <p>Route each task to the model or agent best suited to it. Pool capacity across accounts
+        <span class="integ-kind" data-i18n="integ.c2.kind">AI compute</span>
+        <h3 data-i18n="integ.c2.h3">Models &amp; agent fleets</h3>
+        <p data-i18n="integ.c2.p">Route each task to the model or agent best suited to it. Pool capacity across accounts
            and machines into one governed fleet.</p>
       </article>
       <article class="integ">
-        <span class="integ-kind">Human intelligence</span>
-        <h3>Reviewers &amp; experts</h3>
-        <p>People are first-class providers. Approvals, domain expertise, and judgment calls route
+        <span class="integ-kind" data-i18n="integ.c3.kind">Human intelligence</span>
+        <h3 data-i18n="integ.c3.h3">Reviewers &amp; experts</h3>
+        <p data-i18n="integ.c3.p">People are first-class providers. Approvals, domain expertise, and judgment calls route
            to the right person with full context attached.</p>
       </article>
       <article class="integ">
-        <span class="integ-kind">Tooling</span>
-        <h3>Internal toolchains</h3>
-        <p>Your build systems, scripts, and services become routable steps — governed by the same
+        <span class="integ-kind" data-i18n="integ.c4.kind">Tooling</span>
+        <h3 data-i18n="integ.c4.h3">Internal toolchains</h3>
+        <p data-i18n="integ.c4.p">Your build systems, scripts, and services become routable steps — governed by the same
            policy wall as every AI and human action.</p>
       </article>
       <article class="integ">
-        <span class="integ-kind">Development stack</span>
-        <h3>Repos &amp; workspaces</h3>
-        <p>Work units declare the repositories and paths they touch. Matrix enforces the boundary:
+        <span class="integ-kind" data-i18n="integ.c5.kind">Development stack</span>
+        <h3 data-i18n="integ.c5.h3">Repos &amp; workspaces</h3>
+        <p data-i18n="integ.c5.p">Work units declare the repositories and paths they touch. Matrix enforces the boundary:
            parallel where safe, serialized where not.</p>
       </article>
       <article class="integ">
-        <span class="integ-kind">Development stack</span>
-        <h3>VisualLogic Agent OS</h3>
-        <p>Deep, first-class integration — see above. One supported stack among equals, never a
-           requirement.</p>
+        <span class="integ-kind" data-i18n="integ.c6.kind">Development stack</span>
+        <h3 data-i18n="integ.c6.h3">App platforms &amp; builders</h3>
+        <p data-i18n="integ.c6.p">Visual builders, flow platforms, and app runtimes integrate as routable intelligence —
+           work moves in and out with full context attached, never locked in.</p>
       </article>
     </div>
   </div>
@@ -133,11 +116,11 @@
   <div class="container">
     <div class="band reveal">
       <div>
-        <h2>Ready to put your stack on the fabric?</h2>
-        <p>Start with the guided platform entry — connect your machines and accounts, then route
+        <h2 data-i18n="integ.band.h2">Ready to put your stack on the fabric?</h2>
+        <p data-i18n="integ.band.p">Start with the guided platform entry — connect your machines and accounts, then route
            your first unit of work.</p>
       </div>
-      <a href="/get-started.html" class="btn btn-amber btn-lg">Get started
+      <a href="/get-started.html" class="btn btn-amber btn-lg"><span data-i18n="integ.band.cta">Get started</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m0 0l-5-5m5 5l-5 5"/></svg>
       </a>
     </div>
@@ -153,32 +136,35 @@
           <span>Matrix</span>
           <span class="by">by AIWall</span>
         </a>
-        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+        <p class="footer-tag" data-i18n="common.footer.tag">Matrix routes work to the right intelligence — AI compute or human
            minds — and gives enterprises and teams the governance to trust what comes back.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Platform</h4>
-          <a href="/#platform">Capabilities</a>
-          <a href="/downloads.html">Downloads</a>
-          <a href="/join.html">Join your team</a>
-          <a href="/guides.html">Guides</a>
+          <h4 data-i18n="common.footer.platform">Platform</h4>
+          <a href="/#platform" data-i18n="common.footer.capabilities">Capabilities</a>
+          <a href="/downloads.html" data-i18n="common.footer.downloads">Downloads</a>
+          <a href="/join.html" data-i18n="common.footer.join">Join your team</a>
+          <a href="/guides.html" data-i18n="common.footer.guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosystem</h4>
-          <a href="/integrations.html">Integrations</a>
-          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <h4 data-i18n="common.footer.more">More</h4>
+          <a href="/integrations.html" data-i18n="common.footer.integrations">Integrations</a>
+          <a href="/get-started.html" data-i18n="common.footer.getstarted">Get started</a>
           <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
     <div class="footer-base">
       <span>© 2026 AIWall · Matrix</span>
-      <span>built by the team behind VisualLogic</span>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

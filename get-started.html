@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://aiwall.com/get-started.html">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body data-page="start">
 
 <nav class="nav">
   <div class="container">
@@ -23,13 +23,17 @@
       <span class="by">by AIWall</span>
     </a>
     <div class="nav-links">
-      <a href="/#platform">Platform</a>
-      <a href="/downloads.html">Downloads</a>
-      <a href="/guides.html">Guides</a>
-      <a href="/integrations.html">Integrations</a>
+      <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+      <a href="/#action" data-i18n="common.nav.action">In action</a>
+      <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+      <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
     </div>
     <div class="nav-cta">
-      <a href="https://join.visuallogic.ai" class="btn btn-amber">Enter the platform</a>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
+      <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.download">Downloads</a>
+      <a href="https://join.aiwall.com" class="btn btn-ghost" data-i18n="start.nav.enter">Enter the platform</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -37,18 +41,22 @@
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <a href="/#platform">Platform</a>
-  <a href="/downloads.html">Downloads</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/integrations.html">Integrations</a>
-  <a href="https://join.visuallogic.ai" class="btn btn-amber">Enter the platform</a>
+  <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+  <a href="/#action" data-i18n="common.nav.action">In action</a>
+  <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+  <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
+  <a href="https://join.aiwall.com" class="btn btn-ghost" data-i18n="start.nav.enter">Enter the platform</a>
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+  </div>
 </div>
 
 <header class="page-head">
   <div class="container">
-    <p class="kicker">Get started</p>
-    <h1>Put your first work on the fabric.</h1>
-    <p class="lede">Matrix onboarding is a guided join flow: it signs you in, connects your machine,
+    <p class="kicker" data-i18n="start.kicker">Get started</p>
+    <h1 data-i18n="start.h1">Put your first work on the fabric.</h1>
+    <p class="lede" data-i18n="start.lede">Matrix onboarding is a guided join flow: it signs you in, connects your machine,
        and makes your capacity routable — a few minutes, end to end.</p>
   </div>
 </header>
@@ -56,28 +64,27 @@
 <section class="section">
   <div class="container">
     <div class="start-panel reveal">
-      <h2>Three steps in, fully governed.</h2>
-      <p>Whether you're joining a team or setting up your own fleet, the flow is the same.</p>
+      <h2 data-i18n="start.panel.h2">Three steps in, fully governed.</h2>
+      <p data-i18n="start.panel.p">Whether you're joining a team or setting up your own fleet, the flow is the same.</p>
       <ol class="start-steps">
-        <li><span><strong>Open the Matrix platform entry.</strong> The join flow runs in your
+        <li><span data-i18n-html="start.step1"><strong>Open the Matrix platform entry.</strong> The join flow runs in your
             browser — sign in, or accept the invite your team sent you.</span></li>
-        <li><span><strong>Connect your machine.</strong> The guided install sets up the Matrix
+        <li><span data-i18n-html="start.step2"><strong>Connect your machine.</strong> The guided install sets up the Matrix
             client and links it to your account — no manual configuration.</span></li>
-        <li><span><strong>Route work.</strong> Your capacity joins the fabric. Dispatch your first
+        <li><span data-i18n-html="start.step3"><strong>Route work.</strong> Your capacity joins the fabric. Dispatch your first
             work unit, watch it route, and read the delivered record.</span></li>
       </ol>
-      <a href="https://join.visuallogic.ai" class="btn btn-amber btn-lg">
-        Enter the Matrix platform
+      <a href="https://join.aiwall.com" class="btn btn-amber btn-lg">
+        <span data-i18n="start.cta">Enter the Matrix platform</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7m0 0H9m8 0v8"/></svg>
       </a>
-      <p class="mono muted" style="font-size:0.78rem; margin-top:12px">join.visuallogic.ai</p>
+      <p class="mono muted" style="font-size:0.78rem; margin-top:12px">join.aiwall.com</p>
     </div>
 
-    <div class="note reveal" style="max-width:720px; margin-top:24px">
-      <strong>Where you're going:</strong> the Matrix platform entry currently runs on
-      VisualLogic infrastructure at <span class="mono">join.visuallogic.ai</span> — Matrix is built
-      by the team behind <a href="https://www.visuallogic.ai" target="_blank" rel="noopener" style="color:var(--amber-hi)">VisualLogic</a>.
-      Same platform, wherever the door is.
+    <div class="note reveal" style="max-width:720px; margin-top:24px" data-i18n-html="start.note">
+      <strong>Where you're going:</strong> the Matrix platform entry lives at
+      <span class="mono">join.aiwall.com</span> — one account for the web platform, the installed
+      client, and every machine you connect.
     </div>
   </div>
 </section>
@@ -91,32 +98,35 @@
           <span>Matrix</span>
           <span class="by">by AIWall</span>
         </a>
-        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+        <p class="footer-tag" data-i18n="common.footer.tag">Matrix routes work to the right intelligence — AI compute or human
            minds — and gives enterprises and teams the governance to trust what comes back.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Platform</h4>
-          <a href="/#platform">Capabilities</a>
-          <a href="/downloads.html">Downloads</a>
-          <a href="/join.html">Join your team</a>
-          <a href="/guides.html">Guides</a>
+          <h4 data-i18n="common.footer.platform">Platform</h4>
+          <a href="/#platform" data-i18n="common.footer.capabilities">Capabilities</a>
+          <a href="/downloads.html" data-i18n="common.footer.downloads">Downloads</a>
+          <a href="/join.html" data-i18n="common.footer.join">Join your team</a>
+          <a href="/guides.html" data-i18n="common.footer.guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosystem</h4>
-          <a href="/integrations.html">Integrations</a>
-          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <h4 data-i18n="common.footer.more">More</h4>
+          <a href="/integrations.html" data-i18n="common.footer.integrations">Integrations</a>
+          <a href="/get-started.html" data-i18n="common.footer.getstarted">Get started</a>
           <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
     <div class="footer-base">
       <span>© 2026 AIWall · Matrix</span>
-      <span>built by the team behind VisualLogic</span>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

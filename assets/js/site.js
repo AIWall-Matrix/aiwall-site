@@ -74,3 +74,45 @@
     }).catch(() => {});
   }
 })();
+
+// lightbox — any <a class="shot"> opens its image full-size. No libs.
+(() => {
+  const shots = document.querySelectorAll('a.shot');
+  if (!shots.length) return;
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.hidden = true;
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.innerHTML = '<button class="lb-close" type="button">close ✕</button><img alt=""><p class="lb-cap"></p>';
+  document.body.appendChild(lb);
+  const lbImg = lb.querySelector('img');
+  const lbCap = lb.querySelector('.lb-cap');
+  const closeBtn = lb.querySelector('.lb-close');
+  let lastFocus = null;
+
+  const open = (shot) => {
+    const img = shot.querySelector('img');
+    lbImg.src = shot.getAttribute('href');
+    lbImg.alt = img ? img.alt : '';
+    const cap = shot.querySelector('figcaption');
+    lbCap.textContent = cap ? cap.textContent.trim() : '';
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lastFocus = document.activeElement;
+    closeBtn.focus();
+  };
+  const close = () => {
+    lb.hidden = true;
+    lbImg.src = '';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  };
+
+  shots.forEach((shot) => {
+    shot.addEventListener('click', (e) => { e.preventDefault(); open(shot); });
+  });
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', (e) => { if (e.target === lb || e.target === lbImg) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.hidden) close(); });
+})();

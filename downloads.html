@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://aiwall.com/downloads.html">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body data-page="dl">
 
 <nav class="nav">
   <div class="container">
@@ -24,13 +24,17 @@
       <span class="by">by AIWall</span>
     </a>
     <div class="nav-links">
-      <a href="/#platform">Platform</a>
-      <a href="/downloads.html" aria-current="page">Downloads</a>
-      <a href="/guides.html">Guides</a>
-      <a href="/integrations.html">Integrations</a>
+      <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+      <a href="/#action" data-i18n="common.nav.action">In action</a>
+      <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+      <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
     </div>
     <div class="nav-cta">
-      <a href="/join.html" class="btn btn-amber">Join your team</a>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
+      <a href="/downloads.html" class="btn btn-amber" aria-current="page" data-i18n="common.nav.download">Downloads</a>
+      <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -38,64 +42,101 @@
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <a href="/#platform">Platform</a>
-  <a href="/downloads.html">Downloads</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/integrations.html">Integrations</a>
-  <a href="/join.html" class="btn btn-amber">Join your team</a>
+  <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+  <a href="/#action" data-i18n="common.nav.action">In action</a>
+  <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+  <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
+  <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+  </div>
 </div>
 
 <header class="page-head">
   <div class="container">
-    <p class="kicker">Downloads</p>
-    <h1>Get the Matrix client.</h1>
-    <p class="lede">One command installs everything — a user-level runtime, the client, and a
+    <p class="kicker" data-i18n="dl.kicker">Downloads</p>
+    <h1 data-i18n="dl.h1">Get the Matrix client.</h1>
+    <p class="lede" data-i18n-html="dl.lede">One command installs everything — a user-level runtime, the client, and a
        <span class="mono">matrix</span> launcher on your PATH. No admin rights, no manual
        configuration. All files below are served from aiwall.com.</p>
-    <p style="margin-top:18px"><span class="pill"><span class="dot"></span>stable channel · version <span data-latest-version>…</span></span></p>
+    <p style="margin-top:18px"><span class="pill"><span class="dot"></span><span data-i18n="dl.pill">stable channel · version</span>&nbsp;<span data-latest-version>…</span></span></p>
   </div>
 </header>
 
+<!-- ============================ PLATFORM CARDS ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="dlh-grid reveal">
+      <div class="dlh">
+        <div class="dlh-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M12 15h5"/></svg></div>
+        <h3 data-i18n="dl.card.mac.h3">macOS &amp; Linux installer</h3>
+        <p class="fname">install.sh</p>
+        <p data-i18n-html="dl.card.mac.p">One line in any terminal — installs per-user to <span class="mono">~/.matrix</span>, no sudo.</p>
+        <a class="btn btn-amber" href="/downloads/matrix/stable/install.sh" download><span data-i18n="dl.card.mac.btn">Download install.sh ↓</span></a>
+        <p class="sha-link">SHA-256 · <a href="/downloads/matrix/stable/SHA256SUMS.txt">SHA256SUMS.txt</a></p>
+      </div>
+      <div class="dlh">
+        <div class="dlh-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3 data-i18n="dl.card.win.h3">Windows installer</h3>
+        <p class="fname">matrix.ps1</p>
+        <p data-i18n="dl.card.win.p">PowerShell installer — per-user, no admin rights needed.</p>
+        <a class="btn btn-amber" href="/downloads/matrix/stable/matrix.ps1" download><span data-i18n="dl.card.win.btn">Download matrix.ps1 ↓</span></a>
+        <p class="sha-link">SHA-256 · <a href="/downloads/matrix/stable/SHA256SUMS.txt">SHA256SUMS.txt</a></p>
+      </div>
+      <div class="dlh">
+        <div class="dlh-icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12l8-4.5M12 12L4 7.5M12 12v9"/></svg></div>
+        <h3 data-i18n="dl.card.zip.h3">Standalone zip (offline)</h3>
+        <p class="fname">VL-Matrix-Standalone-0.31.0.zip</p>
+        <p data-i18n-html="dl.card.zip.p">Everything in one zip — unzip and double-click <span class="mono">安装Matrix.command</span>. Chinese install guide included.</p>
+        <a class="btn btn-amber" href="/downloads/matrix/stable/VL-Matrix-Standalone-0.31.0.zip"><span data-i18n="dl.card.zip.btn">Download the zip ↓</span></a>
+        <p class="sha-link">SHA-256 · <a href="/downloads/matrix/stable/SHA256SUMS.txt">SHA256SUMS.txt</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ONE-LINE INSTALL ============================ -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">Install</p>
-      <h2>One line, any machine.</h2>
-      <p>Run the installer, and your browser opens to sign in when it finishes. If your team lead
+      <p class="kicker" data-i18n="dl.inst.kicker">Install</p>
+      <h2 data-i18n="dl.inst.h2">One line, any machine.</h2>
+      <p data-i18n-html="dl.inst.lede">Run the installer, and your browser opens to sign in when it finishes. If your team lead
          already sent you an install code, see <a href="/join.html" style="color:var(--amber-hi)">the join page</a>.</p>
     </div>
 
     <div class="dl-grid reveal">
       <div class="dl-card">
-        <h3>macOS &amp; Linux <span class="os">terminal</span></h3>
-        <p>Paste into any terminal. Installs to <span class="mono">~/.matrix</span>, no sudo, then
+        <h3 data-i18n-html="dl.inst.mac.h3">macOS &amp; Linux <span class="os">terminal</span></h3>
+        <p data-i18n-html="dl.inst.mac.p">Paste into any terminal. Installs to <span class="mono">~/.matrix</span>, no sudo, then
            opens your browser to sign in.</p>
         <div class="codeblock">
           <span class="cb-lang">shell</span>
           <button class="copy-btn" type="button">copy</button>
           <pre>curl -fsSL https://aiwall.com/downloads/matrix/stable/install.sh | sh</pre>
         </div>
-        <p class="alt">Already have an install code from your team? Append
+        <p class="alt" data-i18n-html="dl.inst.mac.alt">Already have an install code from your team? Append
            <span class="mono">-s -- --token &lt;code&gt;</span> and it onboards without any prompts.</p>
       </div>
 
       <div class="dl-card">
-        <h3>Windows <span class="os">powershell</span></h3>
-        <p>Paste into PowerShell with the install code from your team page. Installs per-user,
+        <h3 data-i18n-html="dl.inst.win.h3">Windows <span class="os">powershell</span></h3>
+        <p data-i18n="dl.inst.win.p">Paste into PowerShell with the install code from your team page. Installs per-user,
            no admin rights.</p>
         <div class="codeblock">
           <span class="cb-lang">powershell</span>
           <button class="copy-btn" type="button">copy</button>
-          <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;code&gt; -Cloud https://join.visuallogic.ai</pre>
+          <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;code&gt; -Cloud https://join.aiwall.com</pre>
         </div>
-        <p class="alt">Replace <span class="mono">&lt;code&gt;</span> with your install code —
+        <p class="alt" data-i18n-html="dl.inst.win.alt">Replace <span class="mono">&lt;code&gt;</span> with your install code —
            sign in at the platform and copy it from your Me page.</p>
       </div>
     </div>
 
     <div class="dl-card reveal" style="margin-top:20px">
-      <h3>Standalone package <span class="os">offline / 双击安装</span></h3>
-      <p>Everything in one zip — the installer scripts, the client bundle, checksums, and a
+      <h3 data-i18n-html="dl.inst.zip.h3">Standalone package <span class="os">offline / 双击安装</span></h3>
+      <p data-i18n-html="dl.inst.zip.p">Everything in one zip — the installer scripts, the client bundle, checksums, and a
          step-by-step install guide in Chinese. On macOS, unzip and double-click
          <span class="mono">安装Matrix.command</span>; a window walks you through the rest.</p>
       <div class="codeblock">
@@ -104,7 +145,7 @@
         <pre>https://aiwall.com/downloads/matrix/stable/VL-Matrix-Standalone-0.31.0.zip</pre>
       </div>
       <p class="alt">
-        <a href="/downloads/matrix/stable/VL-Matrix-Standalone-0.31.0.zip">Download the zip ↓</a>
+        <a href="/downloads/matrix/stable/VL-Matrix-Standalone-0.31.0.zip" data-i18n="dl.inst.zip.dl">Download the zip ↓</a>
         &nbsp;·&nbsp;
         <a href="/downloads/matrix/stable/Matrix-Standalone-Install-0.31.0.zh.md">安装说明（中文）</a>
         &nbsp;·&nbsp;
@@ -114,74 +155,74 @@
   </div>
 </section>
 
+<!-- ============================ ALL FILES ============================ -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">All files</p>
-      <h2>Everything in the stable channel.</h2>
-      <p>Byte-identical mirrors of the Matrix release artifacts. Checksums below are read live from
+      <p class="kicker" data-i18n="dl.files.kicker">All files &amp; checksums</p>
+      <h2 data-i18n="dl.files.h2">Everything in the stable channel.</h2>
+      <p data-i18n-html="dl.files.lede">Byte-identical mirrors of the Matrix release artifacts. Checksums below are read live from
          the release's own <a href="/downloads/matrix/stable/SHA256SUMS.txt" style="color:var(--amber-hi)">SHA256SUMS.txt</a>.</p>
     </div>
 
     <div class="file-table-wrap reveal">
       <table class="file-table">
         <thead>
-          <tr><th>File</th><th>What it is</th><th>SHA-256</th></tr>
+          <tr><th data-i18n="dl.files.th1">File</th><th data-i18n="dl.files.th2">What it is</th><th>SHA-256</th></tr>
         </thead>
         <tbody>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/install.sh">install.sh</a></td>
-            <td>macOS / Linux installer (POSIX sh, user-level, no sudo)</td>
+            <td data-i18n="dl.files.f1">macOS / Linux installer (POSIX sh, user-level, no sudo)</td>
             <td class="sha" data-sha-for="install.sh">see SHA256SUMS.txt</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/matrix.ps1">matrix.ps1</a></td>
-            <td>Windows installer (PowerShell, per-user, no admin)</td>
+            <td data-i18n="dl.files.f2">Windows installer (PowerShell, per-user, no admin)</td>
             <td class="sha" data-sha-for="matrix.ps1">see SHA256SUMS.txt</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/client-bundle.tar.gz">client-bundle.tar.gz</a></td>
-            <td>The Matrix light client itself (what the installers unpack)</td>
+            <td data-i18n="dl.files.f3">The Matrix light client itself (what the installers unpack)</td>
             <td class="sha" data-sha-for="client-bundle.tar.gz">see SHA256SUMS.txt</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/VL-Matrix-Standalone-0.31.0.zip">VL-Matrix-Standalone-0.31.0.zip</a></td>
-            <td>Standalone package: installers + bundle + 中文 install guide + <span class="mono">安装Matrix.command</span> (double-click installer, inside the zip)</td>
+            <td data-i18n-html="dl.files.f4">Standalone package: installers + bundle + 中文 install guide + <span class="mono">安装Matrix.command</span> (double-click installer, inside the zip)</td>
             <td class="sha" data-sha-for="VL-Matrix-Standalone-0.31.0.zip">see SHA256SUMS.txt</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/latest.json">latest.json</a></td>
-            <td>Current stable version + client bundle checksum (machine-readable)</td>
+            <td data-i18n="dl.files.f5">Current stable version + client bundle checksum (machine-readable)</td>
             <td class="sha">—</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/SHA256SUMS.txt">SHA256SUMS.txt</a></td>
-            <td>Checksum manifest for the release (also mirrored as <a href="/downloads/matrix/stable/SHA256SUMS-0.31.0.txt">SHA256SUMS-0.31.0.txt</a>)</td>
+            <td data-i18n-html="dl.files.f6">Checksum manifest for the release (also mirrored as <a href="/downloads/matrix/stable/SHA256SUMS-0.31.0.txt">SHA256SUMS-0.31.0.txt</a>)</td>
             <td class="sha">—</td>
           </tr>
           <tr>
             <td class="fname"><a href="/downloads/matrix/stable/Matrix-Standalone-Install-0.31.0.zh.md">Matrix-Standalone-Install-0.31.0.zh.md</a></td>
-            <td>Full install guide, Chinese (registration → invite → install → verify)</td>
+            <td data-i18n="dl.files.f7">Full install guide, Chinese (registration → invite → install → verify)</td>
             <td class="sha" data-sha-for="Matrix-Standalone-Install-0.31.0.zh.md">see SHA256SUMS.txt</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="note reveal" style="max-width:820px; margin-top:24px">
+    <div class="note reveal" style="max-width:820px; margin-top:24px" data-i18n-html="dl.note">
       <strong>What talks to what — honestly.</strong> Every file on this page is self-hosted on
       aiwall.com and byte-identical to the Matrix release (verify with SHA256SUMS.txt). Once the
-      installer <em>runs</em>, it connects to the Matrix platform entry
-      (<span class="mono">join.visuallogic.ai</span> / <span class="mono">matrix.visuallogic.ai</span>)
-      to download the client bundle and complete sign-in — that's the platform itself, not a
-      download mirror — and fetches Node.js from <span class="mono">nodejs.org</span> only if your
-      machine doesn't already have a recent one. The mirrored Chinese install guide and the scripts
-      inside the standalone zip likewise reference the platform entry directly; we mirror them
-      unmodified so checksums stay valid.
+      installer <em>runs</em>, it connects to the Matrix platform entry to download the client
+      bundle and complete sign-in, and fetches Node.js from <span class="mono">nodejs.org</span>
+      only if your machine doesn't already have a recent one. Mirrored files are served unmodified
+      — their contents, including the platform addresses inside the scripts, are exactly the
+      release's own, so checksums stay valid.
     </div>
   </div>
 </section>
 
+<!-- ============================ FOOTER ============================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -191,32 +232,35 @@
           <span>Matrix</span>
           <span class="by">by AIWall</span>
         </a>
-        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+        <p class="footer-tag" data-i18n="common.footer.tag">Matrix routes work to the right intelligence — AI compute or human
            minds — and gives enterprises and teams the governance to trust what comes back.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Platform</h4>
-          <a href="/#platform">Capabilities</a>
-          <a href="/downloads.html">Downloads</a>
-          <a href="/join.html">Join your team</a>
-          <a href="/guides.html">Guides</a>
+          <h4 data-i18n="common.footer.platform">Platform</h4>
+          <a href="/#platform" data-i18n="common.footer.capabilities">Capabilities</a>
+          <a href="/downloads.html" data-i18n="common.footer.downloads">Downloads</a>
+          <a href="/join.html" data-i18n="common.footer.join">Join your team</a>
+          <a href="/guides.html" data-i18n="common.footer.guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosystem</h4>
-          <a href="/integrations.html">Integrations</a>
-          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <h4 data-i18n="common.footer.more">More</h4>
+          <a href="/integrations.html" data-i18n="common.footer.integrations">Integrations</a>
+          <a href="/get-started.html" data-i18n="common.footer.getstarted">Get started</a>
           <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
     <div class="footer-base">
       <span>© 2026 AIWall · Matrix</span>
-      <span>built by the team behind VisualLogic</span>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

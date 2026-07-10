@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://aiwall.com/guides.html">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body data-page="guides">
 
 <nav class="nav">
   <div class="container">
@@ -24,13 +24,17 @@
       <span class="by">by AIWall</span>
     </a>
     <div class="nav-links">
-      <a href="/#platform">Platform</a>
-      <a href="/downloads.html">Downloads</a>
-      <a href="/guides.html" aria-current="page">Guides</a>
-      <a href="/integrations.html">Integrations</a>
+      <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+      <a href="/#action" data-i18n="common.nav.action">In action</a>
+      <a href="/guides.html" aria-current="page" data-i18n="common.nav.guides">Guides</a>
+      <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
     </div>
     <div class="nav-cta">
-      <a href="/join.html" class="btn btn-amber">Join your team</a>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
+      <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.download">Downloads</a>
+      <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -38,25 +42,29 @@
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <a href="/#platform">Platform</a>
-  <a href="/downloads.html">Downloads</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/integrations.html">Integrations</a>
-  <a href="/join.html" class="btn btn-amber">Join your team</a>
+  <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+  <a href="/#action" data-i18n="common.nav.action">In action</a>
+  <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+  <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
+  <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+  </div>
 </div>
 
 <header class="page-head">
   <div class="container">
-    <p class="kicker">Guides · 使用指导</p>
-    <h1>Everything you need, nothing you don't.</h1>
-    <p class="lede">Five short guides cover the whole journey: account, install, team, and running
-       a team as a PM. English first, 中文关键步骤附在每节。</p>
+    <p class="kicker" data-i18n="guides.kicker">Guides · 使用指导</p>
+    <h1 data-i18n="guides.h1">Everything you need, nothing you don't.</h1>
+    <p class="lede" data-i18n="guides.lede">Five short guides cover the whole journey: account, install, team, and running
+       a team as a PM.</p>
     <div class="guide-toc">
-      <a href="#register">01 · Register &amp; sign in</a>
-      <a href="#install">02 · Install the client</a>
-      <a href="#join">03 · Join your team</a>
-      <a href="#pm">04 · PM basics</a>
-      <a href="#after">05 · After you're in</a>
+      <a href="#register" data-i18n="guides.toc1">01 · Register &amp; sign in</a>
+      <a href="#install" data-i18n="guides.toc2">02 · Install the client</a>
+      <a href="#join" data-i18n="guides.toc3">03 · Join your team</a>
+      <a href="#pm" data-i18n="guides.toc4">04 · PM basics</a>
+      <a href="#after" data-i18n="guides.toc5">05 · After you're in</a>
     </div>
   </div>
 </header>
@@ -65,27 +73,27 @@
   <div class="container">
 
     <article class="guide reveal" id="register">
-      <h2>01 · Register &amp; sign in <span class="zh-title">注册与登录</span></h2>
-      <p>Your Matrix account lives on the platform entry. One account works everywhere — the web
+      <h2 data-i18n-html="guides.g1.h2">01 · Register &amp; sign in <span class="zh-title">注册与登录</span></h2>
+      <p data-i18n="guides.g1.p">Your Matrix account lives on the platform entry. One account works everywhere — the web
          platform, the installed client, and every machine you connect.</p>
       <ol>
-        <li>Open <a href="https://join.visuallogic.ai" target="_blank" rel="noopener">join.visuallogic.ai</a> —
+        <li data-i18n-html="guides.g1.li1">Open <a href="https://join.aiwall.com" target="_blank" rel="noopener">join.aiwall.com</a> —
             the Matrix platform entry.</li>
-        <li>Register with your <strong>work email and a password</strong> — about ten seconds.
+        <li data-i18n-html="guides.g1.li2">Register with your <strong>work email and a password</strong> — about ten seconds.
             If your team lead sent you an <strong>invite link</strong>, open that instead: it signs
             you up and lands you in the team in one step.</li>
-        <li>Signing in later is the same address, same email. Your account, teams, and work
+        <li data-i18n="guides.g1.li3">Signing in later is the same address, same email. Your account, teams, and work
             history follow you to any machine.</li>
       </ol>
       <div class="zh-steps">
-        <strong>中文要点：</strong>打开 join.visuallogic.ai → 用工作邮箱+密码注册（约 10 秒）。
+        <strong>中文要点：</strong>打开 join.aiwall.com → 用工作邮箱+密码注册（约 10 秒）。
         PM 发了邀请链接就直接点链接，注册+进团队一步完成。之后登录同一地址即可，账号跟人走，不跟机器走。
       </div>
     </article>
 
     <article class="guide reveal" id="install">
-      <h2>02 · Install the client <span class="zh-title">安装客户端</span></h2>
-      <p>The client is what connects your machine to the fabric. One line, user-level, no admin
+      <h2 data-i18n-html="guides.g2.h2">02 · Install the client <span class="zh-title">安装客户端</span></h2>
+      <p data-i18n="guides.g2.p">The client is what connects your machine to the fabric. One line, user-level, no admin
          rights — and when it finishes, your browser opens by itself to link the install to your
          account.</p>
       <div class="codeblock">
@@ -96,15 +104,15 @@
       <div class="codeblock">
         <span class="cb-lang">windows powershell</span>
         <button class="copy-btn" type="button">copy</button>
-        <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;code&gt; -Cloud https://join.visuallogic.ai</pre>
+        <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;code&gt; -Cloud https://join.aiwall.com</pre>
       </div>
       <ol>
-        <li>Run the line for your OS. It installs to your user directory — no
+        <li data-i18n-html="guides.g2.li1">Run the line for your OS. It installs to your user directory — no
             <code>sudo</code>, no admin prompt.</li>
-        <li>Your browser opens to the platform. Sign in (or register — see guide 01), then copy
+        <li data-i18n-html="guides.g2.li2">Your browser opens to the platform. Sign in (or register — see guide 01), then copy
             the <strong>install code</strong> the page shows you and paste it back into the
             install window.</li>
-        <li>Done — the machine shows up under your account. Prefer clicking to typing? Get the
+        <li data-i18n-html="guides.g2.li3">Done — the machine shows up under your account. Prefer clicking to typing? Get the
             <a href="/downloads.html">standalone zip</a> and double-click
             <code>安装Matrix.command</code> instead.</li>
       </ol>
@@ -117,15 +125,15 @@
     </article>
 
     <article class="guide reveal" id="join">
-      <h2>03 · Join your team <span class="zh-title">加入团队</span></h2>
-      <p>Joining connects your AI work to the team board and lets your idle AI compute serve the
+      <h2 data-i18n-html="guides.g3.h2">03 · Join your team <span class="zh-title">加入团队</span></h2>
+      <p data-i18n="guides.g3.p">Joining connects your AI work to the team board and lets your idle AI compute serve the
          team pool. Credentials never leave your machine — the platform schedules capacity, it
          doesn't hold your accounts.</p>
       <ol>
-        <li>Open the <strong>invite link</strong> your PM sent — it puts your account in the team.</li>
-        <li>Install the client (guide 02) if you haven't. When the browser opens, the install
+        <li data-i18n-html="guides.g3.li1">Open the <strong>invite link</strong> your PM sent — it puts your account in the team.</li>
+        <li data-i18n-html="guides.g3.li2">Install the client (guide 02) if you haven't. When the browser opens, the install
             code you paste ties the machine to you <em>inside the team</em>.</li>
-        <li>That's all. Your AI usage appears on the team board, and idle capacity becomes
+        <li data-i18n-html="guides.g3.li3">That's all. Your AI usage appears on the team board, and idle capacity becomes
             schedulable. The full three-step walkthrough lives at
             <a href="/join.html">aiwall.com/join</a>.</li>
       </ol>
@@ -137,20 +145,20 @@
     </article>
 
     <article class="guide reveal" id="pm">
-      <h2>04 · PM basics <span class="zh-title">PM 基础</span></h2>
-      <p>As a team lead you do three things on Matrix: bring people in, see what's happening, and
+      <h2 data-i18n-html="guides.g4.h2">04 · PM basics <span class="zh-title">PM 基础</span></h2>
+      <p data-i18n="guides.g4.p">As a team lead you do three things on Matrix: bring people in, see what's happening, and
          route work to the capacity you now have.</p>
       <ol>
-        <li><strong>Invite.</strong> Create your team on the platform, copy your invite link, and
+        <li data-i18n-html="guides.g4.li1"><strong>Invite.</strong> Create your team on the platform, copy your invite link, and
             send the ready-made message from <a href="/join.html">the join page</a> to your team
             chat. Each person is three steps from joined.</li>
-        <li><strong>See.</strong> The team board shows real AI usage across members — who is
+        <li data-i18n-html="guides.g4.li2"><strong>See.</strong> The team board shows real AI usage across members — who is
             online, what capacity exists, what work went where and what came back. No more
             guessing how AI is actually used.</li>
-        <li><strong>Route.</strong> Dispatch work units to the pool. The platform matches each one
+        <li data-i18n-html="guides.g4.li3"><strong>Route.</strong> Dispatch work units to the pool. The platform matches each one
             to available intelligence — idle AI compute or the right person — and the governance
             wall enforces permissions, write-scope locks, and review gates on every action.</li>
-        <li><strong>Trust.</strong> Everything delivered comes back as an auditable record in the
+        <li data-i18n-html="guides.g4.li4"><strong>Trust.</strong> Everything delivered comes back as an auditable record in the
             team ledger — context attached, actions provable.</li>
       </ol>
       <div class="zh-steps">
@@ -162,16 +170,16 @@
     </article>
 
     <article class="guide reveal" id="after">
-      <h2>05 · After you're in <span class="zh-title">加入之后</span></h2>
-      <p>Day-to-day, Matrix stays out of your way.</p>
+      <h2 data-i18n-html="guides.g5.h2">05 · After you're in <span class="zh-title">加入之后</span></h2>
+      <p data-i18n="guides.g5.p">Day-to-day, Matrix stays out of your way.</p>
       <ul>
-        <li>Work with your usual AI tools — Matrix is stack-agnostic and observes usage without
+        <li data-i18n="guides.g5.li1">Work with your usual AI tools — Matrix is stack-agnostic and observes usage without
             changing how you build.</li>
-        <li>When your machine is idle, its AI capacity can serve the team pool; when you're
+        <li data-i18n="guides.g5.li2">When your machine is idle, its AI capacity can serve the team pool; when you're
             working, your work comes first.</li>
-        <li>Everything you or the pool produces is a session-independent record — pick any piece
+        <li data-i18n="guides.g5.li3">Everything you or the pool produces is a session-independent record — pick any piece
             of work up later, on any machine, with context intact.</li>
-        <li>Something off? Re-run the installer from <a href="/downloads.html">downloads</a> —
+        <li data-i18n-html="guides.g5.li4">Something off? Re-run the installer from <a href="/downloads.html">downloads</a> —
             it's idempotent — or ask your PM to re-send a fresh install code.</li>
       </ul>
       <div class="zh-steps">
@@ -192,32 +200,35 @@
           <span>Matrix</span>
           <span class="by">by AIWall</span>
         </a>
-        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+        <p class="footer-tag" data-i18n="common.footer.tag">Matrix routes work to the right intelligence — AI compute or human
            minds — and gives enterprises and teams the governance to trust what comes back.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Platform</h4>
-          <a href="/#platform">Capabilities</a>
-          <a href="/downloads.html">Downloads</a>
-          <a href="/join.html">Join your team</a>
-          <a href="/guides.html">Guides</a>
+          <h4 data-i18n="common.footer.platform">Platform</h4>
+          <a href="/#platform" data-i18n="common.footer.capabilities">Capabilities</a>
+          <a href="/downloads.html" data-i18n="common.footer.downloads">Downloads</a>
+          <a href="/join.html" data-i18n="common.footer.join">Join your team</a>
+          <a href="/guides.html" data-i18n="common.footer.guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosystem</h4>
-          <a href="/integrations.html">Integrations</a>
-          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <h4 data-i18n="common.footer.more">More</h4>
+          <a href="/integrations.html" data-i18n="common.footer.integrations">Integrations</a>
+          <a href="/get-started.html" data-i18n="common.footer.getstarted">Get started</a>
           <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
     <div class="footer-base">
       <span>© 2026 AIWall · Matrix</span>
-      <span>built by the team behind VisualLogic</span>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>

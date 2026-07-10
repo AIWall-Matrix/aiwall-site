@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Matrix by AIWall — Intelligence Routing &amp; Governance Platform</title>
-  <meta name="description" content="Matrix routes work to the right intelligence — AI compute or human minds — and gives enterprises and teams the governance to trust what comes back. Stack-agnostic. Session-independent. Fully audited.">
+  <meta name="description" content="Individuals and enterprises use Matrix to route work to the right intelligence — AI compute or human minds — with full context attached and governance you can prove.">
   <meta name="theme-color" content="#0a0b0d">
   <link rel="icon" type="image/svg+xml" href="/assets/img/aiwall-mark.svg">
   <meta property="og:title" content="Matrix by AIWall — Intelligence Routing &amp; Governance Platform">
@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://aiwall.com/">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-<body>
+<body data-page="home">
 
 <nav class="nav">
   <div class="container">
@@ -23,14 +23,17 @@
       <span class="by">by AIWall</span>
     </a>
     <div class="nav-links">
-      <a href="/#platform">Platform</a>
-      <a href="/downloads.html">Downloads</a>
-      <a href="/guides.html">Guides</a>
-      <a href="/integrations.html">Integrations</a>
+      <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+      <a href="/#action" data-i18n="common.nav.action">In action</a>
+      <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+      <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
     </div>
     <div class="nav-cta">
-      <a href="/downloads.html" class="btn btn-ghost">Downloads</a>
-      <a href="/join.html" class="btn btn-amber">Join your team</a>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
+      <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.download">Downloads</a>
+      <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -38,12 +41,15 @@
   </div>
 </nav>
 <div class="drawer" id="drawer">
-  <a href="/#platform">Platform</a>
-  <a href="/#how">How it works</a>
-  <a href="/downloads.html">Downloads</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/integrations.html">Integrations</a>
-  <a href="/join.html" class="btn btn-amber">Join your team</a>
+  <a href="/#platform" data-i18n="common.nav.platform">Platform</a>
+  <a href="/#action" data-i18n="common.nav.action">In action</a>
+  <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
+  <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
+  <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
+  <div class="lang-switch" role="group" aria-label="Language / 语言">
+    <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+  </div>
 </div>
 
 <!-- ============================ HERO ============================ -->
@@ -51,24 +57,26 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <p class="kicker">Intelligence Routing &amp; Governance Platform</p>
-        <h1>Route work to the right <span class="amber">intelligence</span>. Govern everything that comes back.</h1>
-        <p class="lede">
-          Matrix routes each unit of work to the intelligence best suited to it — AI compute or
-          human minds — with full context attached, and gives enterprises and teams the
-          governance to trust the results.
+        <p class="kicker" data-i18n="home.kicker">Intelligence Routing &amp; Governance Platform</p>
+        <h1 data-i18n-html="home.h1">Route work to the right <span class="amber">intelligence</span> — AI compute or human minds.</h1>
+        <p class="lede" data-i18n="home.lede">
+          One builder or a whole enterprise: hand Matrix a unit of work and it routes it to the
+          intelligence best suited to it — full context attached, every action governed, every
+          result provable.
         </p>
         <div class="cta-row">
-          <a href="/join.html" class="btn btn-amber btn-lg">
-            Join your team
+          <a href="/downloads.html" class="btn btn-amber btn-lg">
+            <span data-i18n="home.cta.download">Download Matrix ↓</span>
+          </a>
+          <a href="/join.html" class="btn btn-ghost btn-lg">
+            <span data-i18n="home.cta.join">Join your team</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m0 0l-5-5m5 5l-5 5"/></svg>
           </a>
-          <a href="/downloads.html" class="btn btn-ghost btn-lg">Download the client</a>
         </div>
         <div class="hero-meta">
-          <span><strong>Stack-agnostic</strong> · bring your own agents, models, tools</span>
-          <span><strong>Session-independent</strong> · work carries its own context</span>
-          <span><strong>Governed</strong> · audit trails on every action</span>
+          <span data-i18n-html="home.meta1"><strong>Stack-agnostic</strong> · bring your own agents, models, tools</span>
+          <span data-i18n-html="home.meta2"><strong>Session-independent</strong> · work carries its own context</span>
+          <span data-i18n-html="home.meta3"><strong>Governed</strong> · audit trails on every action</span>
         </div>
       </div>
 
@@ -147,19 +155,101 @@
   </div>
 </header>
 
+<!-- ============================ SEE IT IN ACTION ============================ -->
+<section class="section" id="action">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="kicker" data-i18n="home.shots.kicker">See it in action</p>
+      <h2 data-i18n="home.shots.h2">A world where work gets done.</h2>
+      <p data-i18n="home.shots.lede">This is the real product. Post a mission on the plaza, hire AI and human workers,
+         watch the build at the desks, and receive audited artifacts in the tower — with a dispatch
+         console behind it all.</p>
+    </div>
+
+    <div class="shots-featured reveal">
+      <a class="shot" href="/assets/img/screens/world-overview.png">
+        <figure>
+          <img src="/assets/img/screens/world-overview.png" loading="lazy" width="1440" height="900"
+               alt="Matrix world overview: mission plaza, worker market, team room and repository tower — 世界总览：任务广场、招聘大厅、团队房间与仓库塔">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.world.tag">World</span>
+            <span data-i18n="home.shots.world.cap">One world for your whole team — mission plaza, worker market, team room, repository tower.</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+
+    <div class="shots-grid reveal">
+      <a class="shot" href="/assets/img/screens/mission-team-forming.png">
+        <figure>
+          <img src="/assets/img/screens/mission-team-forming.png" loading="lazy" width="1440" height="900"
+               alt="A mission posted on the bulletin board while candidates gather in the worker market — 任务已发布，候选工人在招聘大厅集结">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.mission.tag">Missions</span>
+            <span data-i18n="home.shots.mission.cap">Post a mission and a team forms — candidates line up in the worker market.</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a class="shot" href="/assets/img/screens/working-at-desks.png">
+        <figure>
+          <img src="/assets/img/screens/working-at-desks.png" loading="lazy" width="1440" height="900"
+               alt="AI and human workers building at their desks in the team room — AI 与人类工人在团队房间的工位上工作">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.desks.tag">Build</span>
+            <span data-i18n="home.shots.desks.cap">AI and human workers side by side at their desks, blueprint on the wall.</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a class="shot" href="/assets/img/screens/artifacts-delivered.png">
+        <figure>
+          <img src="/assets/img/screens/artifacts-delivered.png" loading="lazy" width="1440" height="900"
+               alt="Mission delivered: artifact crates stacking up at the repository tower — 任务交付：产物入库仓库塔">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.delivered.tag">Delivered</span>
+            <span data-i18n="home.shots.delivered.cap">Mission delivered — artifacts stack up in the repository tower, fees released.</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+
+    <div class="shots-grid two reveal">
+      <a class="shot" href="/assets/img/screens/dispatch-console.png">
+        <figure>
+          <img src="/assets/img/screens/dispatch-console.png" loading="lazy" width="1440" height="900"
+               alt="Dispatch console with task inbox, full logs and handoff packs — 调度台：任务收件箱、完整日志与交接包">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.dispatch.tag">Governance</span>
+            <span data-i18n="home.shots.dispatch.cap">The dispatch console — task inbox, full logs, and a handoff pack for every unit of work.</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a class="shot" href="/assets/img/screens/enterprise-console.png">
+        <figure>
+          <img src="/assets/img/screens/enterprise-console.png" loading="lazy" width="1440" height="900"
+               alt="Enterprise console with human and AI roster, review pass rate and evidence completeness — 企业控制台：人类与 AI 员工名册、评审通过率、证据完整度">
+          <figcaption>
+            <span class="cap-tag" data-i18n="home.shots.enterprise.tag">Enterprise</span>
+            <span data-i18n="home.shots.enterprise.cap">The enterprise console — your human + AI roster, review pass rate, evidence completeness.</span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ CAPABILITIES ============================ -->
 <section class="section" id="platform">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">The platform</p>
-      <h2>Four capabilities. One routing fabric.</h2>
-      <p>Intelligence is the resource. Matrix is how work finds it — and how organizations stay in control of it.</p>
+      <p class="kicker" data-i18n="home.plat.kicker">The platform</p>
+      <h2 data-i18n="home.plat.h2">Four capabilities. One routing fabric.</h2>
+      <p data-i18n="home.plat.lede">Intelligence is the resource. Matrix is how work finds it — and how organizations stay in control of it.</p>
     </div>
     <div class="cap-grid reveal">
       <article class="cap">
         <span class="idx">01</span>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 12h6m0 0c3 0 3-5 6-5h6m-6 0l3-3m-3 3l3 3M9 12c3 0 3 5 6 5h6m-6 0l3-3m-3 3l3 3"/></svg></div>
-        <h3>AI compute routing</h3>
+        <h3 data-i18n="home.cap1.h3">AI compute routing</h3>
         <div class="cap-viz" role="img" aria-label="Animation: a work unit is dispatched across idle AI compute — models, agent fleets, toolchains — in parallel">
           <svg viewBox="0 0 260 96" aria-hidden="true">
             <rect class="viz-box" x="10" y="36" width="52" height="24" rx="5"/>
@@ -184,14 +274,14 @@
             <circle class="viz-packet" r="2.6" style="--d:2.2s; offset-path: path('M62 48 C112 48 118 76 166 76')"/>
           </svg>
         </div>
-        <p>Send each task to the model, agent, or toolchain best suited to it. Idle capacity across
+        <p data-i18n="home.cap1.p">Send each task to the model, agent, or toolchain best suited to it. Idle capacity across
            your accounts and machines becomes one routable pool — dispatched in parallel, never
            colliding on the same work.</p>
       </article>
       <article class="cap">
         <span class="idx">02</span>
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5M16 4.5c1.4.5 2.3 1.8 2.3 3.5S17.4 11 16 11.5M18.5 14.5c1.9.8 3 2.3 3.4 4.5"/></svg></div>
-        <h3>Human intelligence routing</h3>
+        <h3 data-i18n="home.cap2.h3">Human intelligence routing</h3>
         <div class="cap-viz" role="img" aria-label="Animation: work that needs judgment is routed to the right person, with full context attached">
           <svg viewBox="0 0 260 96" aria-hidden="true">
             <rect class="viz-box" x="10" y="36" width="66" height="24" rx="5"/>
@@ -215,14 +305,14 @@
             <text class="viz-label" x="96" y="42">+ FULL CONTEXT</text>
           </svg>
         </div>
-        <p>When work needs a person — judgment, approval, expertise — Matrix routes it to the right
+        <p data-i18n="home.cap2.p">When work needs a person — judgment, approval, expertise — Matrix routes it to the right
            one, with full context attached. Humans are first-class nodes on the same fabric, not an
            afterthought.</p>
       </article>
       <article class="cap">
         <span class="idx">03</span>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zm0 0v6m8-1.5L12 12 4 7.5M12 21v-9"/></svg></div>
-        <h3>Context- &amp; session-independent delivery</h3>
+        <h3 data-i18n="home.cap3.h3">Context- &amp; session-independent delivery</h3>
         <div class="cap-viz" role="img" aria-label="Animation: every delivered piece of work accumulates as an auditable record in the organization's ledger">
           <svg viewBox="0 0 260 96" aria-hidden="true">
             <rect class="viz-box" x="10" y="36" width="56" height="24" rx="5"/>
@@ -252,14 +342,14 @@
             </g>
           </svg>
         </div>
-        <p>Work units carry their own context; nothing is trapped in a chat session. Hand off,
+        <p data-i18n="home.cap3.p">Work units carry their own context; nothing is trapped in a chat session. Hand off,
            resume, and audit any piece of work — anywhere, anytime, on any machine. Every record
            accumulates: your organization's AI work becomes an asset, not exhaust.</p>
       </article>
       <article class="cap">
         <span class="idx">04</span>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Enterprise &amp; team governance</h3>
+        <h3 data-i18n="home.cap4.h3">Enterprise &amp; team governance</h3>
         <div class="cap-viz" role="img" aria-label="Animation: a wall builds itself around the organization's AI assets; an ungoverned probe from outside bounces off">
           <svg viewBox="0 0 260 96" aria-hidden="true">
             <text class="viz-label" x="14" y="14">OUTSIDE</text>
@@ -281,7 +371,7 @@
             <text class="viz-label" x="172" y="90">governed · provable</text>
           </svg>
         </div>
-        <p>Permissions, review gates, write-scope locks, audit trails, and execution ledgers for
+        <p data-i18n="home.cap4.p">Permissions, review gates, write-scope locks, audit trails, and execution ledgers for
            every AI and human action. The wall between "AI did something" and "we can prove what
            happened."</p>
       </article>
@@ -293,28 +383,28 @@
 <section class="section" id="how">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">How it works</p>
-      <h2>Route → Govern → Deliver</h2>
-      <p>Every unit of work moves through the same three-stage fabric — whoever, or whatever, does it.</p>
+      <p class="kicker" data-i18n="home.how.kicker">How it works</p>
+      <h2 data-i18n="home.how.h2">Route → Govern → Deliver</h2>
+      <p data-i18n="home.how.lede">Every unit of work moves through the same three-stage fabric — whoever, or whatever, does it.</p>
     </div>
     <div class="flow-steps reveal">
       <article class="step">
-        <h3>Route</h3>
-        <p>Work arrives as self-contained units with declared scope. Matrix matches each one to the
+        <h3 data-i18n="home.how.s1.h3">Route</h3>
+        <p data-i18n="home.how.s1.p">Work arrives as self-contained units with declared scope. Matrix matches each one to the
            best available intelligence — a model, an agent fleet, a toolchain, or a person — and
            dispatches in parallel where scopes don't overlap.</p>
         <span class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M5 12h14m0 0l-5-5m5 5l-5 5"/></svg></span>
       </article>
       <article class="step">
-        <h3>Govern</h3>
-        <p>Every dispatch passes the governance wall: permissions checked, write scopes locked so no
+        <h3 data-i18n="home.how.s2.h3">Govern</h3>
+        <p data-i18n="home.how.s2.p">Every dispatch passes the governance wall: permissions checked, write scopes locked so no
            two workers fight over the same files, review gates enforced where you demand a human in
            the loop. Nothing runs that policy didn't allow.</p>
         <span class="step-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14"><path d="M5 12h14m0 0l-5-5m5 5l-5 5"/></svg></span>
       </article>
       <article class="step">
-        <h3>Deliver</h3>
-        <p>Results return as auditable records — context attached, ledger written. Hand the work to
+        <h3 data-i18n="home.how.s3.h3">Deliver</h3>
+        <p data-i18n="home.how.s3.p">Results return as auditable records — context attached, ledger written. Hand the work to
            the next intelligence, resume it next week, or ship it. Delivery is independent of any
            session, machine, or vendor.</p>
       </article>
@@ -326,42 +416,46 @@
 <section class="section" id="who">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">Who it's for</p>
-      <h2>Anyone who builds with AI.</h2>
-      <p>Matrix is development-stack agnostic: bring your own agents, models, and tools. Nothing is locked in.</p>
+      <p class="kicker" data-i18n="home.who.kicker">Who it's for</p>
+      <h2 data-i18n="home.who.h2">Built for one person. Governed for ten thousand.</h2>
+      <p data-i18n="home.who.lede">The same routing fabric serves a solo builder's private fleet and an enterprise's governed workforce.</p>
     </div>
-    <div class="aud-grid reveal">
-      <article class="aud">
-        <h3>Individuals</h3>
-        <p>Turn your accounts, machines, and agents into one private fleet. Route your own work to
-           it and keep a complete record of everything it did.</p>
+    <div class="pitch-grid reveal">
+      <article class="pitch">
+        <span class="p-kicker" data-i18n="home.ind.kicker">For individuals</span>
+        <h3 data-i18n="home.ind.h3">Post a mission. Hire AI workers. Watch it get built.</h3>
+        <ul>
+          <li data-i18n="home.ind.li1">Turn your accounts, machines, and agents into one private fleet</li>
+          <li data-i18n="home.ind.li2">Dispatch missions to AI workers in parallel — no collisions, no babysitting</li>
+          <li data-i18n="home.ind.li3">Every delivered artifact is yours to keep: context, logs, and history intact</li>
+        </ul>
+        <a href="/downloads.html" class="btn btn-amber" data-i18n="home.ind.cta">Download Matrix ↓</a>
       </article>
-      <article class="aud">
-        <h3>Teams</h3>
-        <p>Pool capacity across teammates, dispatch work in parallel without write collisions, and
-           see at a glance who — human or AI — is on what.</p>
-      </article>
-      <article class="aud">
-        <h3>Enterprises</h3>
-        <p>Put a governance wall around AI adoption: policy, permissions, review gates, and audit
-           trails over every action, without dictating what your teams build with.</p>
+      <article class="pitch amberline">
+        <span class="p-kicker" data-i18n="home.ent.kicker">For enterprises</span>
+        <h3 data-i18n="home.ent.h3">A governed human + AI workforce.</h3>
+        <ul>
+          <li data-i18n="home.ent.li1">Governed dispatch: permissions, write-scope locks, and review gates on every action</li>
+          <li data-i18n="home.ent.li2">Audit logs and execution ledgers — prove what happened, not just that it happened</li>
+          <li data-i18n="home.ent.li3">Humans and AI on one roster, one board — and your data stays your asset</li>
+        </ul>
+        <a href="/join.html" class="btn btn-ghost" data-i18n="home.ent.cta">Bring your team on →</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============================ DUAL TRACK ============================ -->
+<!-- ============================ STACK-AGNOSTIC ============================ -->
 <section class="section">
   <div class="container">
     <div class="band reveal">
       <div>
-        <p class="kicker" style="margin-bottom:10px">Ecosystem</p>
-        <h2>Stack-agnostic by design. VisualLogic is a first-class integration — not a requirement.</h2>
-        <p>Teams building with <a href="https://www.visuallogic.ai" target="_blank" rel="noopener" style="color:var(--amber-hi)">VisualLogic</a>
-           get deep, first-class integration with Matrix. Teams building with anything else get the
-           same routing and governance fabric.</p>
+        <p class="kicker" style="margin-bottom:10px" data-i18n="home.band.kicker">Ecosystem</p>
+        <h2 data-i18n="home.band.h2">Stack-agnostic by design. Bring your own agents, models, and tools.</h2>
+        <p data-i18n="home.band.p">Coding agents, model providers, internal toolchains, and app platforms plug into the
+           fabric as peers — routed and governed the same way. Nothing is locked in.</p>
       </div>
-      <a href="/integrations.html" class="btn btn-ghost btn-lg">Explore integrations
+      <a href="/integrations.html" class="btn btn-ghost btn-lg"><span data-i18n="home.band.cta">Explore integrations</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m0 0l-5-5m5 5l-5 5"/></svg>
       </a>
     </div>
@@ -372,29 +466,29 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <p class="kicker">Start now</p>
-      <h2>Three doors in.</h2>
-      <p>Download the client, join your team in three steps, or read the guides first.</p>
+      <p class="kicker" data-i18n="home.start.kicker">Start now</p>
+      <h2 data-i18n="home.start.h2">Three doors in.</h2>
+      <p data-i18n="home.start.lede">Download the client, join your team in three steps, or read the guides first.</p>
     </div>
     <div class="quick-grid reveal">
       <a class="quick" href="/downloads.html">
-        <span class="q-kicker">Downloads</span>
-        <h3>Get the client</h3>
-        <p>One-line installers for macOS, Linux and Windows, a standalone offline package, and
+        <span class="q-kicker" data-i18n="home.start.q1.kicker">Downloads</span>
+        <h3 data-i18n="home.start.q1.h3">Get the client</h3>
+        <p data-i18n="home.start.q1.p">One-line installers for macOS, Linux and Windows, a standalone offline package, and
            checksums — all served from aiwall.com.</p>
         <span class="go">aiwall.com/downloads →</span>
       </a>
       <a class="quick" href="/join.html">
-        <span class="q-kicker">Join · 加入团队</span>
-        <h3>Three steps, three minutes</h3>
-        <p>Run the installer, paste the install code your PM sent, done — your AI usage joins the
+        <span class="q-kicker" data-i18n="home.start.q2.kicker">Join</span>
+        <h3 data-i18n="home.start.q2.h3">Three steps, three minutes</h3>
+        <p data-i18n="home.start.q2.p">Run the installer, paste the install code your PM sent, done — your AI usage joins the
            team board and idle compute joins the pool.</p>
         <span class="go">aiwall.com/join →</span>
       </a>
       <a class="quick" href="/guides.html">
-        <span class="q-kicker">Guides · 使用指导</span>
-        <h3>Learn the ropes</h3>
-        <p>Register, sign in, install, join your team, and PM basics — concise, bilingual, and
+        <span class="q-kicker" data-i18n="home.start.q3.kicker">Guides</span>
+        <h3 data-i18n="home.start.q3.h3">Learn the ropes</h3>
+        <p data-i18n="home.start.q3.p">Register, sign in, install, join your team, and PM basics — concise, bilingual, and
            complete.</p>
         <span class="go">aiwall.com/guides →</span>
       </a>
@@ -412,32 +506,35 @@
           <span>Matrix</span>
           <span class="by">by AIWall</span>
         </a>
-        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+        <p class="footer-tag" data-i18n="common.footer.tag">Matrix routes work to the right intelligence — AI compute or human
            minds — and gives enterprises and teams the governance to trust what comes back.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Platform</h4>
-          <a href="/#platform">Capabilities</a>
-          <a href="/downloads.html">Downloads</a>
-          <a href="/join.html">Join your team</a>
-          <a href="/guides.html">Guides</a>
+          <h4 data-i18n="common.footer.platform">Platform</h4>
+          <a href="/#platform" data-i18n="common.footer.capabilities">Capabilities</a>
+          <a href="/downloads.html" data-i18n="common.footer.downloads">Downloads</a>
+          <a href="/join.html" data-i18n="common.footer.join">Join your team</a>
+          <a href="/guides.html" data-i18n="common.footer.guides">Guides</a>
         </div>
         <div class="footer-col">
-          <h4>Ecosystem</h4>
-          <a href="/integrations.html">Integrations</a>
-          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <h4 data-i18n="common.footer.more">More</h4>
+          <a href="/integrations.html" data-i18n="common.footer.integrations">Integrations</a>
+          <a href="/get-started.html" data-i18n="common.footer.getstarted">Get started</a>
           <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
     <div class="footer-base">
       <span>© 2026 AIWall · Matrix</span>
-      <span>built by the team behind VisualLogic</span>
+      <div class="lang-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
+      </div>
     </div>
   </div>
 </footer>
 
+<script src="/assets/js/i18n.js"></script>
 <script src="/assets/js/site.js"></script>
 </body>
 </html>
