@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Join your team — Matrix by AIWall</title>
+  <meta name="description" content="Join your team on Matrix in three steps: run the installer, paste your install code, done. 三步加入团队：装、贴码、完成。">
+  <meta name="theme-color" content="#0a0b0d">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/aiwall-mark.svg">
+  <link rel="canonical" href="https://aiwall.com/join">
+  <meta property="og:title" content="Join your team — Matrix by AIWall">
+  <meta property="og:description" content="Three steps: run the installer, paste your install code, done.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aiwall.com/join">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="brand" aria-label="Matrix by AIWall">
+      <img src="/assets/img/aiwall-mark.svg" alt="">
+      <span>Matrix</span>
+      <span class="by">by AIWall</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#platform">Platform</a>
+      <a href="/downloads.html">Downloads</a>
+      <a href="/guides.html">Guides</a>
+      <a href="/integrations.html">Integrations</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/downloads.html" class="btn btn-ghost">Downloads</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="drawer" id="drawer">
+  <a href="/#platform">Platform</a>
+  <a href="/downloads.html">Downloads</a>
+  <a href="/guides.html">Guides</a>
+  <a href="/integrations.html">Integrations</a>
+</div>
+
+<header class="page-head">
+  <div class="container">
+    <p class="kicker">Join your team · 加入团队</p>
+    <h1>Three steps. About three minutes.</h1>
+    <p class="lede">Your team runs on Matrix. Joining connects your AI work to the team board and
+       lets your idle AI compute help the pool — credentials never leave your machine.
+       <span class="zh" style="margin-top:8px">团队在用 Matrix。加入 = 你的 AI 使用情况接入团队看板 +
+       空闲 AI 算力可被团队调度。账号凭证只留在你自己的电脑上。</span></p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="join-steps reveal">
+
+      <div class="join-step">
+        <span class="num">1</span>
+        <div>
+          <h3>Run the installer</h3>
+          <p>Paste one line into your terminal. No admin rights. When it finishes, your browser
+             opens by itself.
+             <span class="zh">终端粘贴一行命令，不需要管理员权限；装完浏览器会自动打开。</span></p>
+          <div class="codeblock">
+            <span class="cb-lang">macos / linux</span>
+            <button class="copy-btn" type="button">copy</button>
+            <pre>curl -fsSL https://aiwall.com/downloads/matrix/stable/install.sh | sh</pre>
+          </div>
+          <div class="codeblock">
+            <span class="cb-lang">windows powershell</span>
+            <button class="copy-btn" type="button">copy</button>
+            <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;安装码&gt; -Cloud https://join.visuallogic.ai</pre>
+          </div>
+          <p class="alt" style="color:var(--ink-faint); font-size:var(--fs-xs)">Prefer clicking to
+             typing? <a href="/downloads.html" style="color:var(--amber-hi)">Download the standalone
+             zip</a> and double-click <span class="mono">安装Matrix.command</span> instead.</p>
+        </div>
+      </div>
+
+      <div class="join-step">
+        <span class="num">2</span>
+        <div>
+          <h3>Paste your install code</h3>
+          <p>In the browser page that just opened: sign in (or register — work email + password,
+             ten seconds). If your PM sent you an invite link, open it to land in the team. Then
+             copy the install code the page shows you — or use the one your PM sent, if it's
+             fresh — and paste it back into the install window.
+             <span class="zh">在打开的网页里注册/登录（PM 发了邀请链接就先点它进团队），把页面显示的安装码
+             粘贴回安装窗口。PM 直接发给你的安装码也行——码有时效，过期就在网页上重新复制一个。</span></p>
+        </div>
+      </div>
+
+      <div class="join-step done">
+        <span class="num">✓</span>
+        <div>
+          <h3>Done</h3>
+          <p>You're on the team. Your AI usage shows up on the team board, and your idle AI compute
+             can be scheduled into the team pool — nothing else to configure.
+             <span class="zh">完成。你的 AI 使用情况已接入团队，空闲算力可被调度，无需再配置任何东西。</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="invite-box reveal">
+      <h2>For team leads: the invite message.</h2>
+      <p>Copy, paste into your team chat, attach your invite link and you're done.
+         <span class="zh">给 PM / 负责人：复制下面这段发到团队群，补上你的邀请链接即可。</span></p>
+      <div class="codeblock">
+        <span class="cb-lang">invite · 邀请文案</span>
+        <button class="copy-btn" type="button">copy</button>
+        <pre>各位同事：
+
+公司已上线 AI 平台（AIWall Matrix），请大家花 3 分钟接入：
+
+1. 打开 https://aiwall.com/join ，复制第 1 步的安装命令，在终端运行
+   （不需要管理员权限，装完浏览器会自动打开）
+2. 在打开的页面注册/登录 —— 我发的邀请链接先点一下加入公司 ——
+   然后把页面显示的安装码粘贴回安装窗口
+3. 完成。你的 AI 使用情况会接入公司平台，空闲的 AI 算力也能被统一调度
+
+AI 账号凭证只留在你自己的电脑上，不会上传。
+有问题看 https://aiwall.com/join 页面说明，或直接找我。</pre>
+      </div>
+    </div>
+
+    <div class="note reveal" style="max-width:760px; margin-top:24px">
+      <strong>Why this matters:</strong> once the team is on Matrix, leads see real AI usage across
+      the team, and work can be routed to idle AI capacity instead of waiting in line — with
+      governance and audit on every action. <a href="/guides.html">Read the guides</a> for what
+      happens after you join.
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="/" class="brand" aria-label="Matrix by AIWall">
+          <img src="/assets/img/aiwall-mark.svg" alt="">
+          <span>Matrix</span>
+          <span class="by">by AIWall</span>
+        </a>
+        <p class="footer-tag">Matrix routes work to the right intelligence — AI compute or human
+           minds — and gives enterprises and teams the governance to trust what comes back.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="/#platform">Capabilities</a>
+          <a href="/downloads.html">Downloads</a>
+          <a href="/join.html">Join your team</a>
+          <a href="/guides.html">Guides</a>
+        </div>
+        <div class="footer-col">
+          <h4>Ecosystem</h4>
+          <a href="/integrations.html">Integrations</a>
+          <a href="https://www.visuallogic.ai" target="_blank" rel="noopener">VisualLogic ↗</a>
+          <a href="https://github.com/AIWall-Matrix" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 AIWall · Matrix</span>
+      <span>built by the team behind VisualLogic</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

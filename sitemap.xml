@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aiwall.com/</loc></url>
+  <url><loc>https://aiwall.com/downloads.html</loc></url>
+  <url><loc>https://aiwall.com/join.html</loc></url>
+  <url><loc>https://aiwall.com/guides.html</loc></url>
   <url><loc>https://aiwall.com/integrations.html</loc></url>
   <url><loc>https://aiwall.com/get-started.html</loc></url>
 </urlset>

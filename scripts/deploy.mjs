@@ -46,8 +46,11 @@ const CF_HOSTED_ZONE = 'Z2FDTNDATAQYW2'; // CloudFront's fixed Route53 alias zon
 const CALLER_REF_PREFIX = 'aiwall-site';
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 
-const SITE_FILES = ['index.html', 'integrations.html', 'get-started.html', '404.html', 'robots.txt', 'sitemap.xml'];
+const SITE_FILES = ['index.html', 'integrations.html', 'get-started.html', 'downloads.html', 'join.html', 'guides.html', '404.html', 'robots.txt', 'sitemap.xml'];
 const SITE_DIRS = ['assets'];
+// clean URLs: upload the same HTML again under an extensionless key so
+// https://aiwall.com/join etc. work (the invite message points there).
+const CLEAN_URL_ALIASES = { 'join.html': 'join', 'downloads.html': 'downloads', 'guides.html': 'guides' };
 const CONTENT_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -393,6 +396,13 @@ function cmdSync() {
       '--body', join(ROOT, rel), '--content-type', ct, '--cache-control', cache], { region: BUCKET_REGION });
     console.log(`${r.ok ? 'up' : 'FAILED'}  ${key}  (${ct})`);
     if (!r.ok) { console.log(`      ${r.err}`); failed++; }
+    const alias = CLEAN_URL_ALIASES[rel];
+    if (alias) {
+      const a = awsCli(['s3api', 'put-object', '--bucket', BUCKET, '--key', alias,
+        '--body', join(ROOT, rel), '--content-type', ct, '--cache-control', cache], { region: BUCKET_REGION });
+      console.log(`${a.ok ? 'up' : 'FAILED'}  ${alias}  (clean-url alias of ${rel})`);
+      if (!a.ok) { console.log(`      ${a.err}`); failed++; }
+    }
   }
   if (state.distId) {
     const r = awsCli(['cloudfront', 'create-invalidation', '--distribution-id', state.distId, '--paths', '/*']);
