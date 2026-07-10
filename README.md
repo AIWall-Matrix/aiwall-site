@@ -46,9 +46,12 @@ nameserver delegation is live, so the usual first-time sequence is
 ### Resources (created 2026-07-10)
 
 - S3 bucket `aiwall-site-049475639320` (us-west-2, private, OAC-only)
-- Route53 hosted zone `aiwall.com` (registrar stays GoDaddy; NS delegated to Route53)
-- ACM certificate `aiwall.com` + `www.aiwall.com` (us-east-1, DNS-validated)
-- CloudFront distribution with both aliases, HTTPS-only, http2+3
+- Route53 hosted zone `aiwall.com` — `Z0519651CISP3EMN55UN` (registrar stays GoDaddy;
+  NS delegated to Route53: awsdns -60.co.uk / -12.net / -50.com / -03.org set)
+- ACM certificate `aiwall.com` + `www.aiwall.com` (us-east-1, DNS-validated) —
+  `arn:aws:acm:us-east-1:049475639320:certificate/7087f18d-a3e1-4193-9f14-3388bdd245a5`
+- CloudFront distribution `E1TU0ZX5G45PFP` (`d1qkugwkefuqdb.cloudfront.net`), both
+  aliases, HTTPS-only, http2+3, OAC `aiwall-site-049475639320-oac`
 - Route53 ALIAS A/AAAA apex + www → distribution
 
 Secrets: GoDaddy API credentials are read from the local secret store
