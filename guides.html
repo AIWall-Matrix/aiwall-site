@@ -33,6 +33,7 @@
       <div class="lang-switch" role="group" aria-label="Language / 语言">
         <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
       </div>
+      <a href="https://join.aiwall.com" class="signin" target="_blank" rel="noopener" data-i18n="common.nav.signin">Sign in</a>
       <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.download">Downloads</a>
       <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
@@ -46,6 +47,7 @@
   <a href="/#action" data-i18n="common.nav.action">In action</a>
   <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
   <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="https://join.aiwall.com" target="_blank" rel="noopener" data-i18n="common.nav.signin">Sign in</a>
   <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
   <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
   <div class="lang-switch" role="group" aria-label="Language / 语言">
@@ -109,16 +111,17 @@
       <ol>
         <li data-i18n-html="guides.g2.li1">Run the line for your OS. It installs to your user directory — no
             <code>sudo</code>, no admin prompt.</li>
-        <li data-i18n-html="guides.g2.li2">Your browser opens to the platform. Sign in (or register — see guide 01), then copy
-            the <strong>install code</strong> the page shows you and paste it back into the
-            install window.</li>
+        <li data-i18n-html="guides.g2.li2">Your browser opens to the platform — sign in (or register — see guide 01) and the
+            machine is linked to your account. Nothing to type and no code to paste: the one-line
+            command on your <strong>Me page → 我的 AI 资源</strong> comes fully pre-filled.</li>
         <li data-i18n-html="guides.g2.li3">Done — the machine shows up under your account. Prefer clicking to typing? Get the
             <a href="/downloads.html">standalone zip</a> and double-click
             <code>安装Matrix.command</code> instead.</li>
       </ol>
       <div class="zh-steps">
         <strong>中文要点：</strong>终端粘贴上面一行命令（不需要管理员权限）→ 装完浏览器自动打开 →
-        登录后把页面显示的<strong>安装码</strong>粘贴回安装窗口即完成。不想敲命令：去
+        登录即完成，机器关联到你的账号。不用手敲、不用贴码：「Me 页 → 我的 AI 资源」里的
+        一行命令是完整填好的。不想敲命令：去
         <a href="/downloads.html" style="color:var(--amber-hi)">下载页</a>拿 standalone zip，
         双击「安装Matrix.command」。
       </div>
@@ -131,14 +134,16 @@
          doesn't hold your accounts.</p>
       <ol>
         <li data-i18n-html="guides.g3.li1">Open the <strong>invite link</strong> your PM sent — it puts your account in the team.</li>
-        <li data-i18n-html="guides.g3.li2">Install the client (guide 02) if you haven't. When the browser opens, the install
-            code you paste ties the machine to you <em>inside the team</em>.</li>
+        <li data-i18n-html="guides.g3.li2">Sign in with your work email — that's it, you're in. Sharing idle AI compute is a
+            separate, optional step for later: copy the pre-filled one-line command from your
+            <strong>Me page → 我的 AI 资源</strong> and run it (guide 02) — nothing to type.</li>
         <li data-i18n-html="guides.g3.li3">That's all. Your AI usage appears on the team board, and idle capacity becomes
-            schedulable. The full three-step walkthrough lives at
+            schedulable. The full walkthrough lives at
             <a href="/join.html">aiwall.com/join</a>.</li>
       </ol>
       <div class="zh-steps">
-        <strong>中文要点：</strong>点 PM 的邀请链接进团队 → 按指导 02 装客户端、贴安装码 → 完成。
+        <strong>中文要点：</strong>点 PM 的邀请链接 → 用工作邮箱登录 → 完成。
+        之后想共享空闲算力（可选）：在「Me 页 → 我的 AI 资源」复制那条已填好的一行命令运行即可。
         你的 AI 使用情况接入团队看板，空闲算力可被团队调度；AI 账号凭证只留在你自己的电脑上。
         最短路径见 <a href="/join.html" style="color:var(--amber-hi)">aiwall.com/join</a>。
       </div>
@@ -151,7 +156,7 @@
       <ol>
         <li data-i18n-html="guides.g4.li1"><strong>Invite.</strong> Create your team on the platform, copy your invite link, and
             send the ready-made message from <a href="/join.html">the join page</a> to your team
-            chat. Each person is three steps from joined.</li>
+            chat. Each person is one link and a sign-in from joined.</li>
         <li data-i18n-html="guides.g4.li2"><strong>See.</strong> The team board shows real AI usage across members — who is
             online, what capacity exists, what work went where and what came back. No more
             guessing how AI is actually used.</li>
@@ -179,12 +184,13 @@
             working, your work comes first.</li>
         <li data-i18n="guides.g5.li3">Everything you or the pool produces is a session-independent record — pick any piece
             of work up later, on any machine, with context intact.</li>
-        <li data-i18n-html="guides.g5.li4">Something off? Re-run the installer from <a href="/downloads.html">downloads</a> —
-            it's idempotent — or ask your PM to re-send a fresh install code.</li>
+        <li data-i18n-html="guides.g5.li4">Something off? Copy the pre-filled command from your
+            <strong>Me page → 我的 AI 资源</strong> and run it again — it's idempotent — or ask
+            your PM for a fresh invite link.</li>
       </ul>
       <div class="zh-steps">
         <strong>中文要点：</strong>照常用你的 AI 工具即可；空闲时算力供团队调度，你用机时你优先。
-        有问题重跑一遍安装命令（可重复执行），或找 PM 重新发一个安装码。
+        有问题就在「Me 页 → 我的 AI 资源」重新复制那条已填好的命令再跑一遍（可重复执行），或找 PM 重新发一个邀请链接。
       </div>
     </article>
 

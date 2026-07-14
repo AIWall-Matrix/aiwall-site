@@ -33,6 +33,7 @@
       <div class="lang-switch" role="group" aria-label="Language / 语言">
         <button type="button" data-lang="en">EN</button><span class="sep" aria-hidden="true">|</span><button type="button" data-lang="zh">中文</button>
       </div>
+      <a href="https://join.aiwall.com" class="signin" target="_blank" rel="noopener" data-i18n="common.nav.signin">Sign in</a>
       <a href="/downloads.html" class="btn btn-amber" aria-current="page" data-i18n="common.nav.download">Downloads</a>
       <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
       <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">
@@ -46,6 +47,7 @@
   <a href="/#action" data-i18n="common.nav.action">In action</a>
   <a href="/guides.html" data-i18n="common.nav.guides">Guides</a>
   <a href="/integrations.html" data-i18n="common.nav.integrations">Integrations</a>
+  <a href="https://join.aiwall.com" target="_blank" rel="noopener" data-i18n="common.nav.signin">Sign in</a>
   <a href="/downloads.html" class="btn btn-amber" data-i18n="common.nav.downloadcta">Download Matrix ↓</a>
   <a href="/join.html" class="btn btn-ghost" data-i18n="common.nav.join">Join your team</a>
   <div class="lang-switch" role="group" aria-label="Language / 语言">
@@ -116,21 +118,23 @@
           <button class="copy-btn" type="button">copy</button>
           <pre>curl -fsSL https://aiwall.com/downloads/matrix/stable/install.sh | sh</pre>
         </div>
-        <p class="alt" data-i18n-html="dl.inst.mac.alt">Already have an install code from your team? Append
-           <span class="mono">-s -- --token &lt;code&gt;</span> and it onboards without any prompts.</p>
+        <p class="alt" data-i18n-html="dl.inst.mac.alt">Connecting this machine to your team? Your
+           <strong>Me page → 我的 AI 资源</strong> has this same command fully pre-filled (token
+           included) — copy, run, done. Nothing to type, no prompts.</p>
       </div>
 
       <div class="dl-card">
         <h3 data-i18n-html="dl.inst.win.h3">Windows <span class="os">powershell</span></h3>
-        <p data-i18n="dl.inst.win.p">Paste into PowerShell with the install code from your team page. Installs per-user,
-           no admin rights.</p>
+        <p data-i18n="dl.inst.win.p">Run in PowerShell — the fully pre-filled version (token included) is ready to copy on
+           your Me page → 我的 AI 资源. Installs per-user, no admin rights.</p>
         <div class="codeblock">
           <span class="cb-lang">powershell</span>
           <button class="copy-btn" type="button">copy</button>
           <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;code&gt; -Cloud https://join.aiwall.com</pre>
         </div>
-        <p class="alt" data-i18n-html="dl.inst.win.alt">Replace <span class="mono">&lt;code&gt;</span> with your install code —
-           sign in at the platform and copy it from your Me page.</p>
+        <p class="alt" data-i18n-html="dl.inst.win.alt">Don't fill in <span class="mono">&lt;code&gt;</span> by hand —
+           sign in at the platform and copy the command fully pre-filled from your
+           Me page → 我的 AI 资源.</p>
       </div>
     </div>
 

@@ -136,6 +136,8 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -0.015em; 
 .nav-links a { color: var(--ink-dim); transition: color 0.15s; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ink); }
 .nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-cta .signin { font-size: var(--fs-sm); color: var(--ink-dim); transition: color 0.15s; white-space: nowrap; }
+.nav-cta .signin:hover { color: var(--ink); }
 
 .menu-btn { display: none; padding: 8px; color: var(--ink-dim); }
 .menu-btn svg { width: 22px; height: 22px; }
@@ -799,7 +801,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.15; letter-spacing: -0.015em; 
   .integ-featured { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 720px) {
-  .nav-links, .nav-cta .btn-ghost { display: none; }
+  .nav-links, .nav-cta .btn-ghost, .nav-cta .signin { display: none; }
   .menu-btn { display: block; }
   .cap-grid { grid-template-columns: minmax(0, 1fr); }
   .cap { border-right: 0 !important; border-bottom: 1px solid var(--line); }
