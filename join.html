@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Join your team — Matrix by AIWall</title>
-  <meta name="description" content="Join your team on Matrix in three steps: run the installer, paste your install code, done. 三步加入团队：装、贴码、完成。">
+  <meta name="description" content="Join your team on Matrix in about a minute: open your invite link, sign in, done. 约一分钟加入团队：点开邀请链接、登录，完成。">
   <meta name="theme-color" content="#0a0b0d">
   <link rel="icon" type="image/svg+xml" href="/assets/img/aiwall-mark.svg">
   <link rel="canonical" href="https://aiwall.com/join">
   <meta property="og:title" content="Join your team — Matrix by AIWall">
-  <meta property="og:description" content="Three steps: run the installer, paste your install code, done.">
+  <meta property="og:description" content="Open your invite link, sign in — you're in. Sharing idle AI compute is optional, anytime.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aiwall.com/join">
   <link rel="stylesheet" href="/assets/css/site.css">
@@ -54,11 +54,11 @@
 <header class="page-head">
   <div class="container">
     <p class="kicker" data-i18n="join.kicker">Join your team · 加入团队</p>
-    <h1 data-i18n="join.h1">Three steps. About three minutes.</h1>
-    <p class="lede" data-i18n-html="join.lede">Your team runs on Matrix. Joining connects your AI work to the team board and
-       lets your idle AI compute help the pool — credentials never leave your machine.
-       <span class="zh" style="margin-top:8px">团队在用 Matrix。加入 = 你的 AI 使用情况接入团队看板 +
-       空闲 AI 算力可被团队调度。账号凭证只留在你自己的电脑上。</span></p>
+    <h1 data-i18n="join.h1">Open the link, sign in. About a minute.</h1>
+    <p class="lede" data-i18n-html="join.lede">Your team runs on Matrix. Joining puts your AI work on the team board;
+       sharing your idle AI compute is a separate, optional step for later — credentials never leave your machine.
+       <span class="zh" style="margin-top:8px">团队在用 Matrix。加入 = 你的 AI 使用情况接入团队看板；
+       共享空闲 AI 算力是之后单独的可选步骤。账号凭证只留在你自己的电脑上。</span></p>
   </div>
 </header>
 
@@ -69,46 +69,39 @@
       <div class="join-step">
         <span class="num">1</span>
         <div>
-          <h3 data-i18n="join.s1.h3">Run the installer</h3>
-          <p data-i18n-html="join.s1.p">Paste one line into your terminal. No admin rights. When it finishes, your browser
-             opens by itself.
-             <span class="zh">终端粘贴一行命令，不需要管理员权限；装完浏览器会自动打开。</span></p>
-          <div class="codeblock">
-            <span class="cb-lang">macos / linux</span>
-            <button class="copy-btn" type="button">copy</button>
-            <pre>curl -fsSL https://aiwall.com/downloads/matrix/stable/install.sh | sh</pre>
-          </div>
-          <div class="codeblock">
-            <span class="cb-lang">windows powershell</span>
-            <button class="copy-btn" type="button">copy</button>
-            <pre>irm https://aiwall.com/downloads/matrix/stable/matrix.ps1 | iex; matrix-install -Token &lt;安装码&gt; -Cloud https://join.aiwall.com</pre>
-          </div>
-          <p class="alt" style="color:var(--ink-faint); font-size:var(--fs-xs)" data-i18n-html="join.s1.alt">Prefer clicking to
-             typing? <a href="/downloads.html" style="color:var(--amber-hi)">Download the standalone
-             zip</a> and double-click <span class="mono">安装Matrix.command</span> instead.</p>
+          <h3 data-i18n="join.s1.h3">Open your invite link</h3>
+          <p data-i18n-html="join.s1.p">Click the invite link your team lead sent you — it opens join.aiwall.com.
+             Nothing to install, no code to type.
+             <span class="zh">点开负责人发给你的邀请链接（会打开 join.aiwall.com）。什么都不用装，也不用输入任何码。</span></p>
         </div>
       </div>
 
       <div class="join-step">
         <span class="num">2</span>
         <div>
-          <h3 data-i18n="join.s2.h3">Paste your install code</h3>
-          <p data-i18n-html="join.s2.p">In the browser page that just opened: sign in (or register — work email + password,
-             ten seconds). If your PM sent you an invite link, open it to land in the team. Then
-             copy the install code the page shows you — or use the one your PM sent, if it's
-             fresh — and paste it back into the install window.
-             <span class="zh">在打开的网页里注册/登录（PM 发了邀请链接就先点它进团队），把页面显示的安装码
-             粘贴回安装窗口。PM 直接发给你的安装码也行——码有时效，过期就在网页上重新复制一个。</span></p>
+          <h3 data-i18n="join.s2.h3">Sign in</h3>
+          <p data-i18n-html="join.s2.p">Register with your work email (or sign in if you already have an account) — about
+             ten seconds. That's it: you're on the team, and your AI usage now shows on the
+             team board.
+             <span class="zh">用工作邮箱注册（已有账号就直接登录），大约十秒。就这样——你已经在团队里了，
+             AI 使用情况开始出现在团队看板上。</span></p>
         </div>
       </div>
 
-      <div class="join-step done">
-        <span class="num">✓</span>
+      <div class="join-step">
+        <span class="num">3</span>
         <div>
-          <h3 data-i18n="join.s3.h3">Done</h3>
-          <p data-i18n-html="join.s3.p">You're on the team. Your AI usage shows up on the team board, and your idle AI compute
-             can be scheduled into the team pool — nothing else to configure.
-             <span class="zh">完成。你的 AI 使用情况已接入团队，空闲算力可被调度，无需再配置任何东西。</span></p>
+          <h3 data-i18n="join.s3.h3">Share idle AI compute (optional, anytime)</h3>
+          <p data-i18n-html="join.s3.p">Want your idle AI capacity to help the team pool? On your <strong>Me page →
+             我的 AI 资源</strong>, copy the ready-made one-line command and run it in your terminal.
+             It comes fully pre-filled — nothing to type, no code to paste — and credentials never
+             leave your machine. Skip it now and do it whenever.
+             <span class="zh">想把空闲 AI 算力共享给团队？登录后在「Me 页 → 我的 AI 资源」复制那条现成的
+             一行命令，在终端运行即可。命令已完整填好——不用手敲、不用贴码——账号凭证永远只留在你自己的
+             电脑上。现在跳过、以后再做都行。</span></p>
+          <p class="alt" style="color:var(--ink-faint); font-size:var(--fs-xs)" data-i18n-html="join.s3.alt">Prefer clicking to
+             typing? <a href="/downloads.html" style="color:var(--amber-hi)">Download the standalone
+             zip</a> and double-click <span class="mono">安装Matrix.command</span> instead.</p>
         </div>
       </div>
 
@@ -120,22 +113,25 @@
   <div class="container">
     <div class="invite-box reveal">
       <h2 data-i18n="join.invite.h2">For team leads: the invite message.</h2>
-      <p data-i18n-html="join.invite.p">Copy, paste into your team chat, attach your invite link and you're done.
-         <span class="zh">给 PM / 负责人：复制下面这段发到团队群，补上你的邀请链接即可。</span></p>
+      <p data-i18n-html="join.invite.p">Copy, paste into your team chat, and swap the placeholder for your invite link
+         (dashboard → Members → Invite; links last 72 hours and are single-use — generate one per person).
+         <span class="zh">给 PM / 负责人：复制下面这段发出去，把占位符换成你的邀请链接
+         （控制台 → 成员 → 邀请；链接 72 小时有效、一人一链）。</span></p>
       <div class="codeblock">
         <span class="cb-lang">invite · 邀请文案</span>
         <button class="copy-btn" type="button">copy</button>
         <pre>各位同事：
 
-公司已上线 AI 平台（AIWall Matrix），请大家花 3 分钟接入：
+公司已上线 AI 平台（AIWall Matrix），加入只要 1 分钟：
 
-1. 打开 https://aiwall.com/join ，复制第 1 步的安装命令，在终端运行
-   （不需要管理员权限，装完浏览器会自动打开）
-2. 在打开的页面注册/登录 —— 我发的邀请链接先点一下加入公司 ——
-   然后把页面显示的安装码粘贴回安装窗口
-3. 完成。你的 AI 使用情况会接入公司平台，空闲的 AI 算力也能被统一调度
+1. 点我的邀请链接：【在这里粘贴你的邀请链接】
+2. 用工作邮箱注册/登录（约 10 秒）—— 完成，你已经在团队里了
+   （什么都不用装，也不用输入任何码）
 
+之后如果想把空闲的 AI 算力共享给团队（可选、随时都行）：
+登录后在「Me 页 → 我的 AI 资源」复制那条现成的一行命令，在终端运行即可。
 AI 账号凭证只留在你自己的电脑上，不会上传。
+
 有问题看 https://aiwall.com/join 页面说明，或直接找我。</pre>
       </div>
     </div>
